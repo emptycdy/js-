@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>档案</title>
+	<link rel="stylesheet" type="text/css" href="学生档案.css">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<legend>学生档案</legend>
+			<label for="">姓名:</label>
+			<input type="text" name="username" id="username" placeholder="请输入用户名">
+			<label for="userPhone">手机号码</label>
+			<input type="tel" name="userPhone" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$" id="userPhone">
+			<label for="email">邮箱:</label>
+			<input type="email" name="email" required="" name="email" id="email">
+			<label for="collage">所属学院:</label>
+			<input type="text" name="collage" id="collage" list="clist" placeholder="请选择学院">
+			<datalist id="clist">
+				<option value="前端">前端</option>
+				<option value="c++">c++</option>
+				<option value="java">java</option>
+			</datalist>
+			<label for="score">入学成绩:</label>
+			<input type="number" name="score" max="100" min="0" value="0" id="score">
+			<label for="level">基础水平:</label>
+			<meter id="level" max="100" min="0" low="59" high="90"></meter>
+			<label for="intime">入学日期:</label>
+			<input type="date" name="intime" id="intime">
+			<label for="leavetime">毕业日期:</label>
+			<input type="date" name="leavetime" id="leavetime">
+			<input type="submit" name="">
+		</fieldset>
+	</form>
+	<script type="text/javascript">
+		document.getElementById('score').oninput=function(){
+			document.getElementById('level').value=this.value;
+		}
+	</script>
+</body>
+</html>

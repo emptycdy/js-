@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="购物车.css">
+	<link rel="stylesheet" href="reset.css">
+	<script type="text/javascript" src="购物车.js"></script>
+</head>
+<body>
+	<table border="1" id="cartTable">
+		<thead>
+			<tr>
+				<th><input type="checkbox" class="check-all check">全选</th>
+				<th>商品</th>
+				<th>单价</th>
+				<th>数量</th>
+				<th>小计</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="checkbox" class="check-one check"></td>
+				<td class="goods"><img src="2.jpg"><span>1234</span></td>
+				<td class="price">5999</td>
+				<td class="count">
+					<div class="count_div">
+						<span class="reduce"></span>
+						<input type="text" value="1">
+						<span class="add">+</span>
+					</div>
+				</td>
+				<td class="subtotal">5999</td>
+				<td class="operation"><span class="delete">删除</span></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="check-one check"></td>
+				<td class="goods"><img src="2.jpg"><span>1234</span></td>
+				<td class="price">5999</td>
+				<td class="count">
+					<div class="count_div">
+						<span class="reduce"></span>
+						<input type="text" value="1">
+						<span class="add">+</span>
+					</div>
+				</td>
+				<td class="subtotal">5999</td>
+				<td class="operation"><span class="delete">删除</span></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="check-one check"></td>
+				<td class="goods"><img src="2.jpg"><span>1234</span></td>
+				<td class="price">5999</td>
+				<td class="count">
+					<div class="count_div">
+						<span class="reduce"></span>
+						<input type="text" value="1">
+						<span class="add">+</span>
+					</div>
+				</td>
+				<td class="subtotal">5999</td>
+				<td class="operation"><span class="delete">删除</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<footer class="foot" id="foot">
+		<label class="fl select-all"><input type="checkbox" class="check-all check">&nbsp;全选</label>
+		<a href="javascript:;" class="fl delete" id="deleteAll">删除</a>
+		<div class="fr closing">结算</div>
+		<div class="fr total">合计:￥<span id="priceTotal">0.00</span></div>
+		<div class="fr selected" id="selected">已选商品
+			<span id="selectedTotal">0</span>件
+			<span class="arrow up">︽</span>
+			<span class="arrow down">︾</span>
+		</div>
+		<div class="selected-view">
+			<div id="selectedViewList" class="no cleanfix"></div>
+			<span class="arrow">*<span>*</span></span>
+		</div>
+	</footer>
+</body>
+</html>

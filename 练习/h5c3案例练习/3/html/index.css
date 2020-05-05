@@ -1,0 +1,38 @@
+*{
+	padding: 0;
+	margin:0;
+}
+#dowebok{
+
+}
+.first{
+	padding-top: 80px;
+}
+.first .logo{
+	background: url("2.jpg");
+	height: 186px;
+	width: 251px;
+	margin: 0 auto;
+}
+.first .text{
+	width: 100%;
+	text-align: center;
+	margin-top: 80px;
+}
+.first .text>img{
+	margin: 0 40px;
+	width: 100px;
+	transition: margin 1s,opacity 1s;
+}
+.first.current .text>img{
+	margin: 0 5px;
+	opacity: 1;
+}
+.first .intro{
+	width: 772px;
+	height: 49px;
+	margin: 40px auto;
+	text-align: center;
+	font-size: 40px;
+	color: white;
+}

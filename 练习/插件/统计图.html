@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #666;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<canvas height="400" width="600"></canvas>
+
+
+<script>
+
+    var data = [{
+        title: '15-20岁',
+        num: 6
+    }, {
+        title: '20-25岁',
+        num: 30
+    }, {
+        title: '25-30岁',
+        num: 15
+    }, {
+        title: '30-35岁',
+        num: 8
+    }, {
+        title: '30-35岁',
+        num: 15
+    }];
+
+    var PieChart = function (ctx) {
+        this.ctx = ctx || document.querySelector('canvas').getContext('2d');
+        this.w = this.ctx.canvas.width;
+        this.h = this.ctx.canvas.height;
+        this.x0 = this.w / 2 + 60;
+        this.y0 = this.h / 2;
+        this.radius = 150;
+        this.outLine = 20;  //斜边伸出去的长度
+        this.rectW = 30;  //矩形大小
+        this.rectH = 16;
+        this.space = 20;
+    }
+
+    PieChart.prototype.init = function (data) {
+        this.drawpie(data);
+    };
+
+    //画图
+    PieChart.prototype.drawpie = function (data) {
+        var anglist = this.transformAngle(data);
+        var startAngle = 0;
+        anglist.forEach((item, i) => {
+            var engAngle = startAngle + item.angle;
+            this.ctx.beginPath();
+            this.ctx.moveTo(this.x0, this.y0);
+            this.ctx.arc(this.x0, this.y0, this.radius, startAngle, engAngle);
+            var color = this.ctx.fillStyle = this.getColor();
+            this.ctx.fill();
+            this.drawTitle(startAngle, item.angle, color, item.title);
+            this.drawDesc(i,item.title);
+            startAngle = engAngle;
+        })
+    };
+
+    //说明标题
+    PieChart.prototype.drawTitle = function (startAngle, angle, color, title) {
+        var edge = this.radius + this.outLine;
+        var edgeX = Math.cos(startAngle + angle / 2) * edge;
+        var edgeY = Math.sin(startAngle + angle / 2) * edge;
+        var outX = this.x0 + edgeX;
+        var outY = this.y0 + edgeY;
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.x0, this.y0);
+        this.ctx.lineTo(outX, outY);
+        this.ctx.strokeStyle = color;
+
+        //文字
+        this.ctx.font = '14px Microsoft YaHei UI';
+        var textWidth = this.ctx.measureText(title).width;
+        if (outX > this.x0) {
+            this.ctx.lineTo(outX + textWidth, outY);
+            this.ctx.textAlign = 'left';
+        } else {
+            this.ctx.lineTo(outX - textWidth, outY);
+            this.ctx.textAlign = 'right';
+        }
+        this.ctx.textBaseline = 'bottom';
+        this.ctx.fillText(title, outX, outY);
+        this.ctx.stroke();
+    };
+
+    //矩形说明
+    PieChart.prototype.drawDesc = function (index,title) {
+        this.ctx.fillRect(this.space,this.space+index*((this.rectH)+this.space),this.rectW,this.rectH);
+        this.ctx.beginPath();
+        this.ctx.textAlign='left';
+        this.ctx.textBaseline='top';
+        this.ctx.font = '12px Microsoft YaHei UI';
+        this.ctx.fillText(title,this.space+this.rectW+10,this.space+index*((this.rectH)+this.space));
+    };
+
+    //转化弧度
+    PieChart.prototype.transformAngle = function (data) {
+        var total = 0;
+        data.forEach((item, i) => {
+            total += item.num;
+        });
+
+        data.forEach((item, i) => {
+            var angle = (item.num / total) * Math.PI * 2;
+            item.angle = angle;
+        });
+        return data;
+
+    };
+
+    //随机颜色
+    PieChart.prototype.getColor = function () {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        return `rgb(${r},${g},${b})`;
+    }
+
+    var pieChart = new PieChart();
+    pieChart.init(data);
+
+
+</script>
+
+
+</body>
+</html>

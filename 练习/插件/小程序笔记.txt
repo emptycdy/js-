@@ -1,0 +1,62 @@
+text相当于span标签；
+view相当于div标签
+checkbox相当于复选框标签
+//运算
+可以在花括号中加入表达式
+
+//列表循环
+wx:for="{{数组或者对象}}"
+
+//block
+占位符标签
+写代码时。可以看到标签存在。
+页面渲染，小程序会把它移除掉
+
+//条件渲染
+wx:if="{{true/false}}"  wx:if   wx:elif  wx:else
+hidden="{{true}}"
+
+当标签不是频繁切换显示  优先是同wx:if
+
+bindleInput//绑定关键字
+
+赋值到data中的正确写法
+this.setData({
+	如  num:e.***.***
+})
+
+引入css文件
+@import
+
+长按复制 selectable
+特殊字符编码  decode
+
+image图片标签 默认320*240
+mode模式，，图片内容和图片宽高适配{
+scaleToFill默认拉伸
+aspectFit保持宽高比，确保图片宽高显示不出来
+aspectFill保持纵横比，保证图片短边完全显示出来
+widthFix宽度不变，相当于web中固定宽度，高度自适应
+}
+lazy-load小程序中图片。直接就支持懒加载（会自己判断，当图片出现在视口的上下三屏的高度之内，自己开始加载图片）
+
+轮播图外容器swiper（默认宽100%高150px）cals(100vw*280/520) swiper高度：swiper宽度*原图高度/原图宽度
+每一个轮播图项swiper-item
+
+//自定义组件
+回调函数写在methods中
+
+//应用生命周期
+onLaunch在应用第一次启动的时候获取用户的个人信息
+onShow应用被用户看到   //对应用的数据页面效果重置
+onHide()应用被隐藏了   //暂停或者清楚定时器
+onError(err)应用的代码发生了报错的时候触发   //在应用发生代码报错的时候，手机用户的错误信息，通过异步请求，将错误的信息发送给后台
+onPageNotFound页面找不到就触发（应用第一次启动时候，如果找不到第一个入口页面，才触发）   //如果页面不存在了，通过js的方式来重新跳转页面  重新跳到第二个页面   
+不能跳到tabbar页面 导航组件类似
+
+//页面生命周期
+onPageScroll()//页面滚动就触发
+onResize()//页面尺寸发生改变时触发，（pageOrientation:"auto"开启横屏竖屏设置）
+onTabItemTap()//必须要求当前页面时tabbar页面，点击自己的tab item时触发
+
+

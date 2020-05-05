@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>播放器</title>
+	<style type="text/css">
+		.player{
+			width: 653px;
+			height: 653px;
+			background: url(../images/bg_circle.png),url(../images/bg_center.png)center center no-repeat;
+			margin: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.play{
+			width: 94px;
+			height: 96px;
+			background: url(../images/btn-bg.png)center center no-repeat;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+		.play_btn{
+			width: 29px;
+			height: 36px;
+			background: url(../images/pause.png);
+		}
+		body{
+			margin: 0;
+			background: url(../images/page-bg.jpg);
+		}
+	</style>
+	<script type="text/javascript">
+		function play(){
+		var obtn=document.getElementsByClassName('play_btn')[0];
+		var audio=document.getElementById('audio');
+			if (audio.paused) {   //判断音频是或否暂停
+				audio.play();
+				obtn.style.background="url(../images/play.png)no-repeat";
+			}
+			else{
+				audio.pause();
+				obtn.style.background="url(../images/pause.png)no-repeat";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="player">
+		<div class="play">
+			<div class="play_btn" onclick="play()">
+				<audio src="../audios/music.mp3" id="audio"></audio>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

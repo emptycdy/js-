@@ -1,0 +1,82 @@
+#cartTable{
+	width: 1000px;
+	margin: auto;
+	border-collapse: collapse;
+}
+td{
+	height: 100px;
+	text-align: center;
+}
+.reduce,.add{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: #ccc;
+	line-height: 30px;
+}
+.count_div>input{
+	display: inline-block;
+	height: 26px;
+	width: 50px;
+}
+.count_div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.foot{
+	margin: auto;
+	width: 1000px;
+	height: 50px;
+	background: #ccc;
+	position: relative;
+}
+.fl{float: left;}
+.fr{float: right;}
+.on{background: green;}
+#selectedViewList{
+	width: 100%;
+	height: 100px;
+	background: white;
+	position: absolute;
+	left: 0;
+	top: -100px;
+	position: relative;
+}
+#selectedViewList>div{
+	float: left;
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+#selectedViewList>div>img{
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+#selectedViewList>div>span{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
+#selectedViewList>div:hover span{
+	display: block;
+}
+#selectedViewList:after{
+	display: block;
+	content: "";
+	width: 8px;
+	height: 8px;
+	background: white;
+	position: absolute;
+	left: 830px;
+	bottom: -4px;
+	transform: rotate(45deg);
+}
+.show{display: block;}
+.no{display: none;}
+img{
+	width: 50px;
+	height: 50px;
+}

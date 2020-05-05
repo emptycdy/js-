@@ -1,0 +1,185 @@
+/*取min到max中的随机整数*/
+function getRondom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+弹性盒模型：display:flex  //开启弹性盒模型
+	    x轴:justift-content
+	    y轴:align-items
+H5  ie9将语义标签解析为行级元素，，9以下不支持H5（需要用js（creatElement）来创建标签，默认解析为行级元素）  10以上全部支持
+/*h5常用*/
+<header>(页眉  可以写多个模块的头部)  <footer>(页脚 写多个底部)  <main>(主要内容)  <article>(文章)  <aside>(主题内容之外) 
+/*表单新增type*/
+input: email(邮箱：提供默认邮箱验证)  tel(电话（可以在移动端打开键盘）)  url(网址（验证只能输入合法网址（http://））)  
+number(数量（只能输入数字不能是字符包含小数点）可以设置max  min)   search(商品名称（可以提供人性化的输入体验可以一键删除）)  
+range(范围  max  min)  color(颜色)  time(时间)  date(日期)  datetime(日期时间（大多数浏览器不支持，只能苹果下面的safari支持）)  
+datetime-local(日期时间)  month(月份)  week(星期)
+/*input新增属性*/
+placeholder:提示文本/提示占位
+autofocus:自动获取焦点
+autocomplete：自动完成   on是打开  off关闭  (1.必须成功提交过  2.必须有name属性)
+required(必须输入)   oninvalid="setCustomValidity('')//设置自定义提示文字
+pattern(正则表达式的验证)(*代表任意个  ？代表0个或1个  +代表1个或多个)  
+文件:<input type="file" name="photo" multiple>（multiple>可以选择多个文件）
+邮箱:<input type="email" multiple>（multiple允许输入多个邮箱地址要用“，”分割）
+form="form标签的id"：指定表单id，指定表单进行提交时，也会将这个元素一起提交
+/*新增事件*/
+onput(修改事件) onkeyup（键盘弹起）
+setCustomValidity(设置默认的提示信息)
+<progress max="100" value="100"></progress>（进度条）
+<meter>(度量器（high:规定的较高值）low（规定的较低值）max min  value（当前值）)
+<audio>音频:controls（控制器页面）autoplay(自动播放) loop（循环）
+<video>视频:controls（控制器页面）autoplay(自动播放) loop（循环）poster(当视频没播放时的第一个封面) width height  注意:只能设置一个宽或者高，要等比
+<soure>:可以准备多个格式视频文件，让浏览器器选择
+/*新增获取元素方式*/
+var java=document.querySelector()/*query:查询   Selector:选择器  querySelector(传入选择器名称（只获取单个元素，如果元素多个，指挥返回条件的第一个标签）添加的类  id按格式写)*/
+/*获取满足条件的所有标签*/
+var java=document.querySelectorAll()
+.classList.add("")为元素添加指定样式，只能添加一种
+.classList.remove("")为元素删除指定样式，只能删除一种（不是移除class属性）
+.classList.toggle("")为元素切换样式，，如果没有则添加，有则删除
+.classList.contains("")判断元素是否包含指定样式，返回true/false 
+/*获取样式*/
+.classList.item()
+
+/*自定义属性*/
+data- 开头 后面必须有一个字符
+
+ononline（网络联连通时候触发）
+onoffline(网络断开)
+addEventListener("事件"，function()) ：添加事件
+
+/*全屏操作的主要方法和属性*/
+RequestFullScreen()开启全屏显示（不同浏览器加不同的前g，chrome:webkit   firefox:moz   ie:ms  opera:o）
+CancelFullScreen()退出全屏显示（不同浏览器加不同的前g，chrome:webkit   firefox:moz   ie:ms  opera:o）退出全屏只能使用document实现
+FullScreenElement是否是全屏状态：只能使用document判断，能力测试
+
+FileReader:读取文件内容
+1.readAsText():读取文本文件
+2.readAsBinaryString():读取任意类型文件
+3.readAsDataURL:获取一段以data开头的字符串
+
+onabort:读取文件中断时触发
+onerror:读取文件错误时
+onload:读取文件完成时
+onloadend:读取完成时触发，无论成功失败
+onloadstart:开始读取时
+onprogress:读取文件过程中持续触发
+
+draggable="true"拖拽
+sessionStorage:存储数据到本地，容量5mb左右
+setItem(key,value)
+getItem(key):
+removeItem(key):
+clear():
+
+localStorage：存储内容更大20mb  储存在硬盘内存中
+
+/*应用缓存*/
+manifest：写在html标签中，文件扩展名appcache，本质是文本文件  文件第一句必须是CACHE MANIFEST
+注意:manifest文件要配置正确的MIME-type,即“text/cache-manifest”,必须在web服务器上进行配置
+
+/*线性渐变*/background:linear-gradient():/*linear-gradient(方向，开始颜色  位置，颜色2  位置，颜色3  位置...)*/
+/*径向渐变*/radial-gradient（形状，大小，坐标）：/*形状：shape：circle：产生正方形的渐变色  ellipse：适配当前的形状，如果时正方形的容器，效果一样*/
+/*2.at position坐标，默认以正中心，可以赋值坐标，可以赋值关键字（left  center  right  top  bottom）*/
+/*3.大小：size（closest-side最近边  farthest-side最远边  closest-corner最近角  farthest-corner最远角）*/
+/*设置颜色位置*/
+
+/*重复渐变*/repeating-radial-gradient
+
+设置背景坐标原点：background-origin（border-box  padding-box  content-box）(从某个位置开始填充。和这个属性重叠)
+设置内容裁切：background-clip: （设置的是裁切，控制的是显示）
+
+/*过度。执行完毕默认回到原来状态*/
+    /*添加过渡效果样式属性名称*/
+    transition-property:right;
+    /*过度效果的耗时，以秒为单位*/
+    transition-duration: 2s;
+    /*设置时间函数--控制运动速度*/
+    transition-timing-function: linear;
+    /*过度效果的延迟*/
+    transition-delay: 2s;
+简写：transition：属性名称  过度时间  时间函数  延迟
+为所有样式添加效果：transition：all （所有效果都一样，效率低） steps（4）可以让过渡效果分为几次完
+
+/*移动参照左上角，，执行王后恢复*/
+transform: translate(x,y)
+/*2d缩放*/
+transform: scale(写倍数)
+/*旋转*/
+transform: rotate(写一个角度（30deg），围绕z轴旋转，，正值顺时针);
+/*斜切*/
+transform:skew(写角度（30deg，30deg），正值负方向斜切)
+
+/*3d*/
+transform: translate3d(x,y,z);
+/*三维旋转*/
+rotate3d(x,y,z,angle)
+perspective:透视距离
+perspective-origin：设置透视观察角度
+
+/*动画*/
+animation-name：动画名称
+animation-duration: 动画总耗时;
+
+/*创建动画*/
+@keyframes aaa{
+            /*百分比是整个动画耗时*/
+        0%{
+            transform: translate(0,0);
+        }
+        100%{
+            transform: translate(500px,600px);
+        }
+        }
+form=0%  to=100%
+/*设置动画播放次数*/
+animation-iteration-count: infinite（无限次）;
+/*交替动画*/
+animation-direction: alternate（来回交替）;
+/*动画延迟*/
+animation-delay
+/*动画结束时的状态*/
+animation-fill-mode: forwards（保留动画结束时状态）backwards（添加动画延迟的前提下，立刻进行动画初始状态）both（两种值都有）;
+/*动画时间函数*/
+animation-timing-function: linear;
+/*动画播放状态*/
+animation-play-state: paused（暂停）running（播放）;
+
+/*设置列数*/
+column-count:
+/*设置列间隙样式*/
+column-rule: 
+/*设置列间隙大小*/
+column-gap
+/*设置列宽*/
+column-width（如果设置宽度大，则去更大的值，但是会填充整个屏幕，意味着最终的宽度可能会大鱼设置宽度，填充整个屏幕）
+/*设置跨列显示 1/all*/
+column-span:
+
+/*弹性布局*/
+
+/*设置单个元素在侧轴方向上的对其方式*/
+align-self:
+
+/*获取表格所有tr元素  特有属性*/
+.children[1].rows;
+/*获取所有td*/
+tr[i].cells[4]
+
+低版本ie没有classname方法
+if (!document.getElementsByClassName) {
+		document.getElementsByClassName=function(cls){
+			var ret=[];
+			var els=document.getElementsByTagName('*');
+			for(i=0;i<els.length;i++){
+				if(els[i].className===cls
+					||els[i].className.indexOf(cls+" ")>=0
+					||els[i].className.indexOf(" "+cls+" ")>=0
+					||els[i].className.indexOf(" "+cls)>=0){
+					ret.push(els[i]);
+				}
+			}
+			return ret;
+		}
+	}
