@@ -1,0 +1,5 @@
+/* pages/demo5/demo5.wxss */
+/*@import"../../style011/common.wxss";*/
+view{
+  color: red;
+}

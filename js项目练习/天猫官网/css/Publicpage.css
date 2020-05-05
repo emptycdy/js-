@@ -1,0 +1,240 @@
+* {
+    color: #A49999;
+    box-sizing: border-box;
+}
+
+.publicwidth {
+    width: 1000px;
+    margin: auto;
+}
+
+/*导航*/
+.top_nav {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    line-height: 30px;
+}
+
+nav.top a {
+    color: #A49999;
+}
+
+nav.top {
+    background: #F2F2F2;
+    font-size: 12px;
+}
+
+.topLeft > a, .topLeft > span {
+    margin-right: 20px;
+}
+
+.topRight > a {
+    margin-right: 20px;
+}
+
+.colorRed {
+    color: #C40000;
+}
+
+nav.top a:hover {
+    text-decoration: none;
+    color: #C40000;
+}
+
+/*搜索*/
+.searchBox {
+    height: 170px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.search {
+    width: 400px;
+    margin: 55px auto;
+}
+
+.searchDiv {
+    width: 400px;
+    background: #C40000;
+    border: 2px #C40000 solid;
+    display: flex;
+    border-top-width: 2px;
+    align-items: center;
+}
+
+.searchDiv > .searchIpt {
+    height: 40px;
+    width: 275px;
+    border: none;
+    outline: none;
+    flex: 2.5;
+
+}
+
+.searchDiv > .searchBtn {
+    height: 40px;
+    flex: 1;
+    border: transparent 1px solid;
+    background: #C40000;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+}
+
+.searchBelow > span > a, .searchBelow > span > span {
+    margin-right: 16px;
+    font-size: 16px;
+}
+
+.searchBelow a:hover {
+    text-decoration: none;
+    color: #C40000;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: -37px;
+}
+
+/*简单导航*/
+
+.Simple_searchBox {
+    height: 100px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.Simple_search {
+    width: 300px;
+    margin: 10px 20px;
+    float: right;
+}
+
+.Simple_searchDiv {
+    width: 300px;
+    background: #C40000;
+    border: 2px #C40000 solid;
+    display: flex;
+    border-top-width: 2px;
+    align-items: center;
+}
+
+.Simple_searchDiv > .Simple_searchIpt {
+    height: 35px;
+    width: 275px;
+    border: none;
+    outline: none;
+    flex: 3;
+
+}
+
+.Simple_searchDiv > .Simple_searchBtn {
+    height: 35px;
+    flex: 1;
+    border: transparent 1px solid;
+    background: #C40000;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.Simple_searchBelow > span > a, .Simple_searchBelow > span > span {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.Simple_searchBelow a:hover {
+    text-decoration: none;
+    color: #C40000;
+}
+
+.Simple_logo {
+    position: absolute;
+    top: 45px;
+    left: 0;
+}
+
+.Simple_logo_img {
+    width: 142px;
+}
+
+/*页脚一*/
+
+.footer_ensure {
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer_desc {
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 77px;
+}
+
+.footer_desc a:hover {
+    text-decoration: none;
+    color: #C40000;
+}
+
+.descColumn > a {
+    display: block;
+    line-height: 20px;
+}
+
+.descColumnTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #A49999;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+/*页脚二*/
+
+.copyright {
+    background: black;
+    border-top: 2px solid #C40000;
+}
+
+.cateye {
+    margin: 0 0 -3px 234px;
+    display: inline-block;
+}
+
+.white_link {
+    margin: 15px 0;
+}
+
+.white_link > a, .white_link > span {
+    color: white;
+    margin-right: 10px;
+    line-height: 20px;
+}
+
+.license > p:nth-of-type(2) {
+    color: #686868;
+    margin: 10px 0;
+}
+
+.license > img {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+

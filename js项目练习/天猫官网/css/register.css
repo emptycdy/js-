@@ -1,0 +1,37 @@
+.form{
+    width: 400px;
+    margin: auto;
+    margin-top: 80px;
+}
+.form>li{
+    margin-top: 20px;
+}
+.form>li>span,.form>li>input{
+    color: black;
+}
+.form>li>span{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 50px;
+}
+.form i{
+    font-style: normal;
+    color: black;
+}
+.form>li:nth-of-type(1)>span,.form>li:nth-of-type(3)>span{
+    font-weight: bold;
+}
+.form .submit{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    font-size: 12px;
+    color: white;
+    margin: auto;
+    background: #C40000;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}

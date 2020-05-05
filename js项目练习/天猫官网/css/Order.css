@@ -1,0 +1,208 @@
+/*状态*/
+.state {
+    height: 40px;
+    border-bottom: 2px solid #E8E8E8;
+}
+
+.state > div {
+    width: 100px;
+    height: 41.5px;
+    float: left;
+}
+
+.state > div > span {
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 2px solid #C40000;
+}
+
+.state > div.active > span {
+    color: #C40000;
+}
+
+/*信息导航*/
+.message_header {
+    height: 50px;
+    background: #F5F5F5;
+    border: 1px solid #E8E8E8;
+    margin: 20px auto;
+    display: flex;
+}
+
+.message_header > div {
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+}
+
+.message_header > div:nth-of-type(1) {
+    flex: 5.5;
+}
+
+/*订单详情*/
+.Order_details {
+    border: 2px solid #ECECEC;
+    margin-bottom: 20px;
+}
+
+.Order_details:hover {
+    border-color: #AAAAAA;
+}
+
+.Order_title {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #F1F1F1;
+    padding-left: 10px;
+}
+
+.Order_information {
+    flex: 7.5;
+}
+
+.Order_information > .times {
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+.Order_information > .order_number {
+    color: #0f0f0f;
+}
+
+.confirmOrder {
+    flex: 2;
+}
+
+.contact {
+    flex: 2;
+}
+
+.contact_img {
+    width: 68px;
+    height: 20px;
+    background-image: url("../image/wangwang.gif");
+    margin: auto;
+}
+
+.Trash {
+    flex: 1;
+    text-align: center;
+}
+
+.Trash > .iconfont {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.Order_content {
+    display: flex;
+}
+
+.Order_content > div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.Order_content > .Product_information {
+    flex: 5.5;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.Product_picture > img {
+    width: 80px;
+    height: 80px;
+}
+
+.Product_information > img {
+    margin-top: 48px;
+}
+
+.Order_content > .Product_price {
+    padding: 35px 0;
+}
+
+.Product_price > p {
+    font-size: 13px;
+}
+
+.Product_price > p:nth-of-type(2), .Product_num {
+    color: #0f0f0f;
+}
+
+.Product_num, .Actual_payment, .Transaction_operation {
+    border-left: 1px solid #ccc;
+}
+
+.Order_content > .Actual_payment {
+    flex: 1.5;
+}
+
+.Actual_payment > p:nth-of-type(1) {
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.Receiving {
+    font-size: 12px;
+    color: white;
+    border: none;
+    background: #66B6FF;
+    width: 72px;
+    height: 30px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.Evaluate {
+    width: 40px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #0f0f0f;
+    font-weight: bold;
+    background: none;
+    font-size: 12px;
+}
+
+.Deliver {
+    background: none;
+    border: none;
+    color: #0f0f0f;
+    font-size: 12px;
+}
+
+.payment {
+    font-size: 12px;
+    color: white;
+    border: none;
+    background: #66B6FF;
+    width: 40px;
+    height: 30px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+

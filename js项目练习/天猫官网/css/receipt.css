@@ -1,0 +1,147 @@
+.Speed_progress {
+    text-align: center;
+}
+
+.Speed_progress > .times {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.Speed_progress > .times > div {
+    width: 20%;
+    float: left;
+}
+
+.Reply {
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 20px auto;
+}
+
+/*订单信息*/
+.Order_content {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Order_content > thead th {
+    color: black;
+    font-weight: bold;
+    background: #E8F2FF;
+}
+
+.Order_content tr {
+    border: 1px solid #ccc;
+}
+
+.Order_content td {
+    color: black;
+    text-align: center;
+}
+
+.Order_content > tbody > tr > td:nth-of-type(1) {
+    padding: 20px;
+    width: 500px;
+    text-align: left;
+}
+
+.Order_content > tbody > tr > td:nth-of-type(1) > img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.Order_content > tbody > tr > td:nth-of-type(1) > a {
+    width: 200px;
+    margin-left: 40px;
+}
+
+.Order_content > tbody > tr > td:nth-of-type(1) > a:hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.Order_content > tbody > tr > td:nth-of-type(4) {
+    color: #666666;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Order_information {
+    margin-bottom: 20px;
+}
+
+.Order_information > .money {
+    text-align: right;
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    margin: 20px 0;
+}
+
+.Order_information > .money > span {
+    font-size: 14px;
+    color: #C70E13;
+}
+
+.Order_information > ul {
+    border-top: 1px solid #ccc;
+    margin: 0 20px;
+    padding: 10px;
+}
+
+.Order_information > ul > li {
+    margin: 10px 0;
+}
+
+.Order_information > ul > li > span:nth-of-type(1) {
+    display: inline-block;
+    margin-right: 200px;
+    font-size: 14px;
+    color: black;
+}
+
+.Order_information > ul > li > span:nth-of-type(2) {
+    color: black;
+    font-size: 14px;
+}
+
+.Order_information > ul > li .img {
+    display: inline-block;
+    width: 68px;
+    height: 20px;
+    background: url("../image/wangwang.gif");
+    vertical-align: middle;
+}
+
+.Tips {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #F58B0F;
+    padding: 20px 80px;
+    margin-top: 20px;
+}
+
+.Tips > p {
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Tips > button {
+    color: white;
+    background: #F4A21D;
+    border: 1px solid #F58B0F;
+    border-radius: 3px;
+    margin-top: 60px;
+}
+
+
+
+
+
+
+
+

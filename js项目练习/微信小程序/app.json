@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/demo5/demo5",
+    "pages/demo7/demo7",
+    
+    "pages/demo6/demo6",
+    "pages/demo3/demo3",
+    "pages/demo1/demo1",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "我的应用",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

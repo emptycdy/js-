@@ -1,0 +1,191 @@
+.product {
+    display: flex;
+}
+
+.product > .left {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.product > .left > img {
+    width: 85%;
+    height: 100%;
+}
+
+.product > .right {
+    flex: 1.2;
+    border-top: 1px solid #ccc;
+    padding: 30px;
+}
+
+.product > .right > p {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product > .right > ul {
+    margin-top: 20px;
+}
+
+.product > .right > ul > li {
+    margin-bottom: 10px;
+}
+
+.product > .right > ul > li > span:nth-of-type(1) {
+    display: inline-block;
+    width: 80px;
+}
+
+.product > .right > ul > li:nth-of-type(1) i {
+    color: #C40000;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.product > .right > ul > li:nth-of-type(3) i {
+    color: #C40000;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.Tips {
+    margin-top: 20px;
+    width: 500px;
+    height: 150px;
+    border: 1px solid #F6F5F3;
+    padding: 20px 80px;
+    background: #FDFBFA;
+}
+
+.Tips_content {
+    width: 230px;
+    height: 40px;
+    border: #ccc solid 1px;
+    display: flex;
+}
+
+.Tips_logo {
+    border-right: 1px solid #ccc;
+}
+
+.Tips_text {
+    padding: 5px;
+}
+
+/*累计评价*/
+.Cumulative_evaluation {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.evaluation_title {
+    width: 170px;
+    height: 40px;
+    background: #F6F5F1;
+    border: 1px solid #ccc;
+    border-top: 10px solid #C40000;
+    line-height: 30px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.evaluation_title:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 3px;
+    position: absolute;
+    top: 25.5px;
+    left: 165px;
+    z-index: 10;
+    background: #F6F5F1;
+}
+
+.hr {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    border: 1px solid #ccc;
+    background: #F6F5F1;
+    z-index: -1;
+}
+
+.evaluation_content {
+    width: 100%;
+    background: #EFEFEF;
+    padding: 20px 50px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+.content_title {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.evaluation {
+    width: 450px;
+    height: 130px;
+    background: white;
+    border: 1px solid #ccc;
+    display: flex;
+}
+
+.evaluation_left {
+    flex: 1;
+    text-align: center;
+    line-height: 130px;
+    border-right: 1px solid #ccc;
+    color: black;
+}
+
+.evaluation_right {
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evaluation_right > textarea {
+    width: 95%;
+    height: 85%;
+}
+
+.btn {
+    padding: 20px 0;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.btn > button {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    background: #C40000;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,236 @@
+/*logo*/
+.buyPageDiv {
+    margin-top: 20px;
+}
+
+.buyPageDiv > img:nth-of-type(1) {
+    float: left;
+}
+
+.buyPageDiv > img:nth-of-type(2) {
+    float: right;
+}
+
+/*地址*/
+.address_title {
+    color: #0f0f0f;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.addressTable td {
+    padding: 4px 0;
+}
+
+.addressTable tr > td:nth-of-type(1) {
+    color: #0f0f0f;
+    width: 120px;
+}
+
+.addressTable tr > td:nth-of-type(1) > span {
+    color: red;
+}
+
+.addressTable textarea {
+    width: 380px;
+    color: #0f0f0f;
+}
+
+.addressTable input {
+    width: 190px;
+    color: #0f0f0f;
+}
+
+/*确认信息*/
+.confirm{
+    margin-bottom: 20px;
+}
+
+.confirm_title {
+    color: #0f0f0f;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 35px 0;
+}
+
+.information {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.information > div {
+    margin: 0 1px;
+    border-bottom: 3px #B2D1FF solid;
+    padding-bottom: 15px;
+}
+
+.information > div:nth-of-type(1) {
+    flex: 18;
+    text-align: left;
+    color: #0f0f0f;
+    display: flex;
+    align-items: center;
+}
+
+.information > div:nth-of-type(1) > img {
+    width: 20px;
+}
+
+.information > div:nth-of-type(1) > span {
+    background: url("../image/wangwang.gif") 48px 56px;
+    display: inline-block;
+    height: 100%;
+    width: 17px;
+}
+
+.information > div:nth-of-type(2) {
+    flex: 2;
+}
+
+.information > div:nth-of-type(3) {
+    flex: 1;
+}
+
+.information > div:nth-of-type(4) {
+    flex: 2;
+}
+
+.information > div:nth-of-type(5) {
+    flex: 6;
+}
+
+.item {
+    display: flex;
+    width: 100%;
+}
+
+.item > .item_content > div {
+    margin: 0 1px;
+}
+
+.item_left {
+    flex: 23;
+}
+
+.item_content {
+    width: 100%;
+    display: flex;
+    margin: 10px 0;
+}
+
+.item_ifm {
+    display: flex;
+    align-items: center;
+    flex: 18;
+}
+
+.item_ifm > img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.item_price {
+    text-align: center;
+    flex: 2;
+}
+
+.item_num {
+    flex: 1;
+}
+
+.item .item_money {
+    flex: 2;
+    color: #CC0000;
+    font-weight: bold;
+}
+
+.item > div:nth-of-type(5) {
+    flex: 6;
+}
+
+.item_price, .item_num, .item_money {
+    text-align: center;
+    line-height: 60px;
+    color: #0f0f0f;
+}
+
+.Delivery {
+    flex: 6;
+    color: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Leaving {
+    background: #F2F6FF;
+    border-top: 3px solid #B4D0FF;
+    width: 100%;
+    padding: 20px 20px 0 20px;
+}
+
+.Leaving_left {
+    float: left;
+}
+
+.Leaving_left > .text {
+    display: flex;
+    align-items: center;
+}
+
+.Leaving_left > .text > span {
+    display: block;
+    margin-top: 30px;
+}
+
+.Leaving_left textarea {
+    width: 220px;
+    /*height: 50px;*/
+    height: 20px;
+}
+
+.Leaving_right {
+    float: right;
+}
+
+.confirm > .Actual_payment {
+    text-align: right;
+    width: 100%;
+    margin: 50px 0;
+    padding-right: 30px;
+}
+
+.confirm > .Actual_payment > span {
+    font-weight: bold;
+    font-size: 20px;
+    color: #C40000;
+}
+
+.confirm > .Submission {
+    text-align: right;
+    width: 100%;
+}
+
+.confirm > .Submission > button {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    background: #C40000;
+    width: 177px;
+    height: 46px;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+

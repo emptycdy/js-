@@ -1,0 +1,163 @@
+/*小结算*/
+.Selected_smitems {
+    text-align: right;
+    color: black
+}
+
+.Selected_smitems > strong {
+    color: #C40000;
+}
+
+.Selected_smitems > button {
+    background: #AAAAAA;
+    border: none;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+/*购物车*/
+.cart {
+    border-collapse: collapse;
+}
+
+.cart td {
+    width: 125px;
+}
+
+.cart > thead > tr {
+    height: 50px;
+}
+
+.cart > tbody > tr {
+    height: 80px;
+    border: 1px solid #ccc;
+}
+
+.cart > thead > tr > td {
+    padding: 20px 0 20px 15px;
+    color: #0f0f0f;
+}
+
+.checkAll {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+tbody > tr > td {
+    padding: 20px 0 20px 15px;
+}
+
+.cart > tbody > tr > td:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cart .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+}
+
+.cart .img > img {
+    width: 90%;
+}
+
+.cart_logo {
+    margin-top: 30px;
+}
+
+.Unit_Price > p {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.Unit_Price > p:nth-of-type(2) {
+    color: #C40000;
+}
+
+.number {
+    display: flex;
+    width: 80px;
+    height: 20px;
+}
+
+.number > input {
+    width: 50%;
+    display: inline-block;
+    border: 1px solid #AAAAAA;
+    text-align: center;
+}
+
+.number > div {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    color: #0f0f0f;
+}
+
+.Amount_money {
+    color: #C40000;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/*结算*/
+.Settlement {
+    height: 50px;
+    background: #E5E5E5;
+    line-height: 50px;
+    padding-left: 15px;
+    margin: 20px auto;
+}
+
+.Settlement > .checkAll {
+    float: left;
+}
+
+.Settlement_content {
+    float: right;
+    height: 100%;
+}
+
+.Settlement_content > button {
+    height: 100%;
+    width: 130px;
+    background: #AAAAAA;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.Settlement_content > span {
+    font-weight: bold;
+    color: #C40000;
+}
+
+.Settlement_content > strong {
+    color: #C40000;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

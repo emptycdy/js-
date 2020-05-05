@@ -1,0 +1,202 @@
+/* .comwidth {
+	width: 400px;
+	margin: auto;
+} */
+
+/*顶部*/
+.top_bar {
+	height: 200px;
+	width: 100%;
+	background: #d43c33;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/*position: fixed;
+		left: 0;
+		top: 0;*/
+}
+
+.topsvg {
+	width: 442px;
+	height: 73px;
+	padding: 0 20px;
+
+}
+
+.top_bar button {
+	width: 260px;
+	height: 93px;
+	border-radius: 93px;
+	border: none;
+	color: red;
+	background: white;
+	margin: 0 20px;
+	outline: none;
+	font-size: 43px;
+}
+
+/*导航*/
+.nav {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 10px;
+}
+
+.nav>label {
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 40px;
+	display: block;
+}
+
+/*新歌推荐*/
+.recommand_song_title,
+.new_song_title {
+	font-size: 45px;
+	border-left: 5px red solid;
+	padding-left: 15px;
+	margin: 40px 0;
+}
+
+.recommand_song {
+	width: 100%;
+
+}
+
+.recommand_song ul {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	/*强制换行*/
+}
+
+.recommand_song ul>li {
+	margin-bottom: 40px;
+}
+
+.recommand_song p {
+	font-size: 37px;
+}
+
+.recommand_song li {
+	width: 32.5%;
+}
+
+.recommand_song img {
+	width: 100%;
+}
+
+.recommand_song p {
+	text-align: center;
+}
+
+/*最新音乐*/
+.new_song ul li h3 {
+	font-weight: normal;
+	font-size: 35px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.new_song ul li p {
+	font-size: 18px;
+	color: #999;
+}
+
+.new_song ul {
+	width: 100%;
+}
+
+.new_song ul li {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px 0 30px 25px;
+	line-height: 20px;
+	border-bottom: #dedede solid 1px;
+	position: relative;
+}
+
+.new_song a {
+	color: #333;
+	text-decoration: none;
+}
+
+.btn_play {
+	width: 56px;
+	height: 56px;
+	background: url(../img/index_icon_2x.png) -58px 1px no-repeat;
+	background-size: 406px;
+	position: absolute;
+	top: 50px;
+	right: 37px;
+}
+
+.screen {
+	width: 100%;
+	overflow: hidden;
+}
+
+.inner {
+	width: 300%;
+}
+
+.rec_song,
+.hotSong,
+.search {
+	float: left;
+	width: 33.33%;
+}
+
+.hotSong {
+	height: 300px;
+	background-color: red;
+}
+
+#tab1:checked~.screen>.inner {
+	transition: margin-left 0.5s;
+	margin-left: 0;
+}
+
+#tab2:checked~.screen>.inner {
+	transition: margin-left 0.5s;
+	margin-left: -100%;
+}
+
+#tab3:checked~.screen>.inner {
+	transition: margin-left 0.5s;
+	margin-left: -200%;
+}
+
+#tab1:checked~.nav>label:nth-child(1) {
+	color: red;
+	border-bottom: 3px solid red;
+}
+
+#tab2:checked~.nav>label:nth-child(2) {
+	color: red;
+	border-bottom: 3px solid red;
+}
+
+#tab3:checked~.nav>label:nth-child(3) {
+	color: red;
+	border-bottom: 3px solid red;
+}
+
+#tab1,
+#tab2,
+#tab3 {
+	display: none;
+}
+
+.search>input[type='search'] {
+	width: 90%;
+	border-radius: 50px;
+	outline: none;
+	height: 30px;
+	border: 1px solid rgb(192, 192, 192);
+	margin: 30px auto;
+	display: block;
+	background: rgb(236, 236, 236);
+}

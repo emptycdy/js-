@@ -1,0 +1,73 @@
+
+.content{
+    width: 640px;
+    height: 640px;
+    position: relative;
+    margin: 20px auto;
+}
+.btn{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.btn button{
+    background: none;
+    border: none;
+    background-size:100% 100%;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+}
+.startBtn button{
+    width: 200px;
+    height: 80px;
+    background-image: url("starts.jfif");
+    background-position: center;
+    background-size: 167%;
+    margin-left: -100px;
+    margin-top: -40px;
+    border-radius:30px;
+}
+.pauseBtn{
+    display: none;
+}
+.pauseBtn button{
+    width: 70px;
+    height: 70px;
+    background-image: url("paused.jpg");
+    background-size: 76px;
+    background-position: -2px -2.4px;
+    border-radius: 35px;
+    margin-left: -35px;
+    margin-top: -35px;
+}
+
+#snakeWrap{
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(-90deg, #29bdd9 0%, #276ace 100%);
+    border: 20px solid #9c9eff;
+    position: relative;
+}
+#snakeWrap>div{
+    width: 20px;
+    height: 20px;
+}
+.snakeHead{
+    background-image: url("snake.jfif");
+    background-size: cover;
+    border-radius: 20px;
+}
+.snakeBody{
+    background:linear-gradient(-90deg, #70F570 0%, #49C628 100%);
+    border-radius: 20px;
+}
+.food{
+    border-radius: 20px;
+    background:linear-gradient(-90deg, #FDD819 0%, #E80505 100%);
+}

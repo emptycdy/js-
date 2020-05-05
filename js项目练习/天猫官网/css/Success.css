@@ -1,0 +1,65 @@
+.Payment_successful{
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.success{
+    height: 60px;
+    width: 100%;
+    background: #ECFFDC;
+    line-height: 60px;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.success>img{
+    vertical-align: middle;
+}
+.Payment_successful>.message{
+    padding: 30px 80px;
+}
+.Payment_successful>.message>ul>li{
+    list-style-type:square;
+    color: #0f0f0f;
+    margin-bottom: 10px;
+}
+.Payment_successful>.message>ul>li:nth-of-type(2)>span{
+    color: #B10000;
+    font-weight: bold;
+}
+.Payment_successful>.message>div{
+    color: #0f0f0f;
+    margin-left: -12px;
+}
+.Payment_successful>.message>div>a{
+    color: #2D8CBA;
+}
+.remind{
+    margin: 0 30px;
+    border-top: 1px #ccc dashed;
+    height: 60px;
+    line-height: 60px;
+    color: #0f0f0f;
+    padding-left: 10px;
+}
+.remind>span:nth-of-type(1){
+    color: #0f0f0f;
+    font-weight: bold;
+}
+.remind>span:nth-of-type(2){
+    color: #B10000;
+}
+.remind>img{
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+

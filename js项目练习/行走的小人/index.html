@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<canvas width="600" height="400"></canvas>
+
+
+<script>
+
+    var Person = function (ctx) {
+        this.ctx = ctx || document.querySelector('canvas').getContext('2d');
+        this.src = '04.png';
+        this.canvasWidth = this.ctx.canvas.width;
+        this.canvasHeight = this.ctx.canvas.height;
+        //行走
+        this.stepSzie = 10;  //行走大小步数
+        this.direction = 0;  //方向
+        this.stepx = 0;
+        this.stepy = 0;
+        this.init();
+    }
+
+    //初始化
+    Person.prototype.init = function () {
+        var that = this;
+        this.loadImage(function (image) {
+            //图片大小
+            that.imageWidth = image.width;
+            that.imageHeight = image.height;
+            //人物大小
+            that.personWidth = that.imageWidth / 4;
+            that.personHeight = that.imageHeight / 4;
+            //图片起点;
+            that.x0 = that.canvasWidth / 2 - that.personWidth / 2;
+            that.y0 = that.canvasHeight / 2 - that.personHeight / 2;
+            //默认正面
+            that.ctx.drawImage(image,
+                0, 0,
+                that.personWidth, that.personHeight,
+                that.x0, that.y0,
+                that.personWidth, that.personHeight);
+            //绑定键盘事件
+            that.index = 0;
+            document.onkeydown = function (e) {
+                if (e.keyCode == 40) {
+                    //前
+                    that.direction = 0;
+                    that.drawImage(image);
+                    that.stepy++;
+                } else if (e.keyCode == 37) {
+                    //左
+                    that.direction = 1;
+                    that.drawImage(image);
+                    that.stepx--;
+                } else if (e.keyCode == 39) {
+                    //右
+                    that.direction = 2;
+                    that.drawImage(image);
+                    that.stepx++;
+                } else if (e.keyCode == 38) {
+                    //后
+                    that.direction = 3;
+                    that.drawImage(image);
+                    that.stepy--;
+                }
+            }
+        })
+    }
+
+    //加载图片
+    Person.prototype.loadImage = function (callback) {
+        var image = new Image();
+        image.onload = function () {
+            callback && callback(image);
+        }
+        image.src = this.src;
+    }
+
+    //绘制图片
+    Person.prototype.drawImage = function (image) {
+        this.index++;
+        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        var stepX=this.x0 + this.stepx * this.stepSzie;
+        var stepY=this.y0 + this.stepy * this.stepSzie;
+        if(stepX>=this.canvasWidth-this.personWidth){
+            this.stepx=(this.canvasWidth-this.personWidth-this.x0)/this.stepSzie;
+        }else if(stepX<=0){
+            this.stepx=(0-this.x0)/this.stepSzie;
+        }
+        if(stepY>=this.canvasHeight-this.personHeight){
+            this.stepy=(this.canvasHeight-this.personHeight-this.y0)/this.stepSzie;
+        }else if(stepY<=0){
+            this.stepy=(0-this.y0)/this.stepSzie;
+        }
+        this.ctx.drawImage(image,
+            this.index * this.personWidth, this.direction * this.personHeight,
+            this.personWidth, this.personHeight,
+            stepX, stepY,
+            this.personWidth, this.personHeight);
+        if (this.index >= 3) {
+            this.index = 0;
+        }
+    }
+
+    new Person();
+
+</script>
+
+
+</body>
+</html>
